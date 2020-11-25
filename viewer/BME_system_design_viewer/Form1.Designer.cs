@@ -37,7 +37,6 @@
             this.txtBaudRate = new System.Windows.Forms.TextBox();
             this.btnOpen = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.hi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // frame
@@ -56,7 +55,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 482);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 15);
+            this.label5.Size = new System.Drawing.Size(87, 18);
             this.label5.TabIndex = 6;
             this.label5.Text = "COM Port";
             // 
@@ -66,7 +65,7 @@
             this.cboPortName.Location = new System.Drawing.Point(91, 479);
             this.cboPortName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboPortName.Name = "cboPortName";
-            this.cboPortName.Size = new System.Drawing.Size(114, 23);
+            this.cboPortName.Size = new System.Drawing.Size(114, 26);
             this.cboPortName.TabIndex = 7;
             // 
             // label6
@@ -74,7 +73,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(226, 482);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 15);
+            this.label6.Size = new System.Drawing.Size(91, 18);
             this.label6.TabIndex = 8;
             this.label6.Text = "Baud Rate";
             // 
@@ -83,7 +82,7 @@
             this.txtBaudRate.Location = new System.Drawing.Point(308, 477);
             this.txtBaudRate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBaudRate.Name = "txtBaudRate";
-            this.txtBaudRate.Size = new System.Drawing.Size(114, 25);
+            this.txtBaudRate.Size = new System.Drawing.Size(114, 28);
             this.txtBaudRate.TabIndex = 9;
             // 
             // btnOpen
@@ -108,21 +107,9 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // hi
-            // 
-            this.hi.Location = new System.Drawing.Point(700, 475);
-            this.hi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.hi.Name = "hi";
-            this.hi.Size = new System.Drawing.Size(86, 29);
-            this.hi.TabIndex = 12;
-            this.hi.Text = "Test";
-            this.hi.UseVisualStyleBackColor = true;
-            this.hi.Click += new System.EventHandler(this.hi_Click);
-            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(822, 515);
-            this.Controls.Add(this.hi);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.txtBaudRate);
@@ -148,7 +135,6 @@
         private System.Windows.Forms.TextBox txtBaudRate;
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button hi;
     }
 }
 

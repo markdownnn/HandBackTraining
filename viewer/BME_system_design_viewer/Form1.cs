@@ -195,12 +195,6 @@ namespace BME_system_design_viewer
                     randomHand = 32;
                     break;
             }
-
-            for (int i = 0; i < buffSize; i++)
-            {
-                handSign[i] = randomHand;
-            }
-            
         }
     }
 }
