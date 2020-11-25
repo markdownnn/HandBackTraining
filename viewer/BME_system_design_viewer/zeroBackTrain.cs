@@ -18,48 +18,118 @@ namespace BME_system_design_viewer
             InitializeComponent();
         }
 
-        private void zeroBackTrain_Load(object sender, EventArgs e)
+        private async void zeroBackTrain_Load(object sender, EventArgs e)
         {
-            zeroBackImage.SizeMode = PictureBoxSizeMode.StretchImage;
-            zeroBackImage.Image = Properties.Resources.hand_rock;
-            zeroBackImage.Focus(); // 키보드 입력을 받기 위함
+            userHand.SizeMode = PictureBoxSizeMode.StretchImage;
+            computerHand.SizeMode = PictureBoxSizeMode.StretchImage;
+            computerHand.Focus();
+            while (currentImage <= 6)
+            {
+                await processHandSign();
+            }
+            Form1.f.frame.Controls.Clear();
+            nBackTraining screen4 = new nBackTraining();
+            Form1.f.frame.Controls.Add(screen4);
+        }
+        private Image returnImageByNum(int num) // 1부터 6까지를 받아 해당 손동작의 이미지로 반환하는 함수
+        {
+            switch (num)
+            {
+                case 0:
+                    return Properties.Resources.hand_undefined;
+                case 1:
+                    return Properties.Resources.hand_rock;
+                case 2:
+                    return Properties.Resources.hand_paper;
+                case 3:
+                    return Properties.Resources.hand_scissors;
+                case 4:
+                    return Properties.Resources.hand_okay;
+                case 5:
+                    return Properties.Resources.hand_thumbup;
+                case 6:
+                    return Properties.Resources.hand_phone;
+                default:
+                    return Properties.Resources.hand_undefined;
+            }
         }
 
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData) // 키보드 입력을 받는 함수
+        private async Task processHandSign()
         {
-            if (keyData == Keys.Q && currentImage == 1) // 주먹 이미지일 때 Q를 누르면 진행
+            computerHand.Image = returnImageByNum(currentImage);
+
+            await activateTimer();
+            int handSign = checkHandSign(Form1.handSign, 250);
+
+            userHand.Image = returnImageByNum(handSign);
+
+            if (handSign == currentImage)
             {
+                showComment.Text = "맞았습니다. 계속 진행하세요!";
                 currentImage += 1;
-                zeroBackImage.Image = Properties.Resources.hand_paper;
             }
-            else if (keyData == Keys.W && currentImage == 2)
+            else
             {
-                currentImage += 1;
-                zeroBackImage.Image = Properties.Resources.hand_scissors;
+                showComment.Text = "틀렸습니다. 다시 한 번 해 보세요!";
             }
-            else if (keyData == Keys.E && currentImage == 3)
+        }
+
+        private async Task activateTimer()
+        {
+            counter.Text = "3";
+            await Task.Delay(1000);
+            counter.Text = "2";
+            await Task.Delay(1000);
+            counter.Text = "1";
+            await Task.Delay(1000);
+            counter.Text = "";
+        }
+
+        private int checkHandSign(int[] array, int arraySize)
+        {
+            int[] action = new int[7];
+            int frequency = 0, maxValue = 0;
+
+            for (int i = 0; i < arraySize; i++)
             {
-                currentImage += 1;
-                zeroBackImage.Image = Properties.Resources.hand_okay;
+                switch (array[i])
+                {
+                    case 0:
+                        action[0]++;
+                        break;
+                    case 1:
+                        action[1]++;
+                        break;
+                    case 2:
+                        action[2]++;
+                        break;
+                    case 4:
+                        action[3]++;
+                        break;
+                    case 8:
+                        action[4]++;
+                        break;
+                    case 16:
+                        action[5]++;
+                        break;
+                    case 32:
+                        action[6]++;
+                        break;
+                    default:
+                        break;
+                }
             }
-            else if (keyData == Keys.R && currentImage == 4)
+
+            for (int j = 0; j < 7; j++)
             {
-                currentImage += 1;
-                zeroBackImage.Image = Properties.Resources.hand_thumbup;
+                if (frequency <= action[j])
+                {
+                    frequency = action[j];
+                    maxValue = j;
+                }
             }
-            else if (keyData == Keys.T && currentImage == 5)
-            {
-                currentImage += 1;
-                zeroBackImage.Image = Properties.Resources.hand_phone;
-            }
-            else if (keyData == Keys.Y && currentImage == 6)
-            {
-                currentImage += 1;
-                Form1.f.frame.Controls.Clear();
-                nBackTraining screen4 = new nBackTraining();
-                Form1.f.frame.Controls.Add(screen4);
-            }
-            return true;
+
+            return maxValue;
         }
     }
 }

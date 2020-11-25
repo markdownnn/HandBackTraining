@@ -139,12 +139,6 @@
     <None Include="Resources\quitButton.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\babyShark.wma" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\babyShark.wav" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\hand_okay.jpg" />
   </ItemGroup>
   <ItemGroup>

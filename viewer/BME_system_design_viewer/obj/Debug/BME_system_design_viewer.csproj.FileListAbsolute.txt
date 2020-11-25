@@ -70,3 +70,19 @@ C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\obj\Debug\BME_
 C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csproj.CopyComplete
 C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.exe
 C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.pdb
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\bin\Debug\BME_system_design_viewer.exe.config
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\bin\Debug\BME_system_design_viewer.exe
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\bin\Debug\BME_system_design_viewer.pdb
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csprojAssemblyReference.cache
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.descriptionPage.resources
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.Form1.resources
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.gameResult.resources
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.gameStart.resources
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.nBackTraining.resources
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.zeroBackTrain.resources
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.Properties.Resources.resources
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csproj.GenerateResource.cache
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csproj.CoreCompileInputs.cache
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csproj.CopyComplete
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.exe
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.pdb

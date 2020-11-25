@@ -64,7 +64,7 @@ namespace BME_system_design_viewer
                 await Task.Delay(firstNBackDelay);
             }
             index = 0; // 처음 N개를 보여줬으므로 인덱스를 다시 0으로 만든다.
-            userHand.Focus(); // 키보드 입력을 받기 위해 Focus가 필요
+            userHand.Focus();
             updateIndexDisplay();
         }
 
@@ -73,48 +73,6 @@ namespace BME_system_design_viewer
             int imageNum = rand.Next(1, 7);
             computerHand.Image = returnImageByNum(imageNum);
             return imageNum;
-        }
-
-        private Keys convertNumToKeys(int num) // 1부터 6까지를 해당 손동작의 키 Q~Y로 반환하는 함수
-        {
-            switch (num)
-            {
-                case 1:
-                    return Keys.Q;
-                case 2:
-                    return Keys.W;
-                case 3:
-                    return Keys.E;
-                case 4:
-                    return Keys.R;
-                case 5:
-                    return Keys.T;
-                case 6:
-                    return Keys.Y;
-                default:
-                    return Keys.Z;
-            }
-        }
-
-        private Image returnImageByKey(Keys keyData) // Q부터 Y까지를 받고 해당 손동작의 이미지로 반환하는 함수
-        {
-            switch (keyData)
-            {
-                case Keys.Q:
-                    return returnImageByNum(1);
-                case Keys.W:
-                    return returnImageByNum(2);
-                case Keys.E:
-                    return returnImageByNum(3);
-                case Keys.R:
-                    return returnImageByNum(4);
-                case Keys.T:
-                    return returnImageByNum(5);
-                case Keys.Y:
-                    return returnImageByNum(6);
-                default:
-                    return returnImageByNum(0);
-            }
         }
 
         private Image returnImageByNum(int num) // 1부터 6까지를 받아 해당 손동작의 이미지로 반환하는 함수
@@ -138,31 +96,6 @@ namespace BME_system_design_viewer
                 default:
                     return Properties.Resources.hand_undefined;
             }
-        }
-
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData) // 키보드 입력을 받는 함수
-        {
-            userHand.Image = returnImageByKey(keyData); // 사용자의 손동작을 화면에 보여줌
-            // 키보드를 눌렀을 때, 현재 누른 키와 정답 배열에 저장된 숫자에 해당하는 키가 같은 경우
-            if (keyData == convertNumToKeys(pastAnswer[index])) correctAnswer++;
-            else wrongAnswer++;
-
-            pastAnswer[index++] = currentImage; // 현재 보여준 손동작에 해당하는 숫자를 배열에 저장하고 인덱스를 1 증가시킴
-            currentImage = nextNBack(); // 다음 손동작을 보여주면서 currentImage 변수에 그 손동작에 해당하는 숫자를 저장
-            if (index >= stage) index = 0;
-
-            updateIndexDisplay();
-            // MessageBox.Show(string.Format("{0} {1} {2}", pastAnswer[0], pastAnswer[1], pastAnswer[2]));
-
-            if (++total == gameEnd) {
-                Form1.f.frame.Controls.Clear();
-                gameResult screen5 = new gameResult();
-                screen5.correct = correctAnswer; // 변수 전달
-                screen5.wrong = wrongAnswer; // 변수 전달
-                Form1.f.frame.Controls.Add(screen5);
-            }
-
-            return true;
         }
 
         private async Task processHandSign()
