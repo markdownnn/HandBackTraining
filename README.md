@@ -1,2 +1,2 @@
-# biomedical-project
-It is a repository for biomedical engineering project.
+# 생체시스템설계프로젝트 8조
+펌웨어와 뷰어 파일입니다.
