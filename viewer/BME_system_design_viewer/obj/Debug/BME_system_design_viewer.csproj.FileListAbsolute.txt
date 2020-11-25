@@ -1,0 +1,72 @@
+C:\Users\user\source\repos\BME_system_design_viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csprojResolveAssemblyReference.cache
+C:\Users\user\source\repos\BME_system_design_viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.Form1.resources
+C:\Users\user\source\repos\BME_system_design_viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.Properties.Resources.resources
+C:\Users\user\source\repos\BME_system_design_viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csproj.GenerateResource.Cache
+C:\Users\user\source\repos\BME_system_design_viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\BME_system_design_viewer\BME_system_design_viewer\bin\Debug\BME_system_design_viewer.exe.config
+C:\Users\user\source\repos\BME_system_design_viewer\BME_system_design_viewer\bin\Debug\BME_system_design_viewer.exe
+C:\Users\user\source\repos\BME_system_design_viewer\BME_system_design_viewer\bin\Debug\BME_system_design_viewer.pdb
+C:\Users\user\source\repos\BME_system_design_viewer\BME_system_design_viewer\bin\Debug\Mitov.BasicLab.dll
+C:\Users\user\source\repos\BME_system_design_viewer\BME_system_design_viewer\bin\Debug\Mitov.PlotLabBasic.dll
+C:\Users\user\source\repos\BME_system_design_viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.exe
+C:\Users\user\source\repos\BME_system_design_viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.pdb
+C:\Users\user\Downloads\C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\bin\Debug\BME_system_design_viewer.exe.config
+C:\Users\user\Downloads\C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\bin\Debug\BME_system_design_viewer.exe
+C:\Users\user\Downloads\C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\bin\Debug\BME_system_design_viewer.pdb
+C:\Users\user\Downloads\C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\bin\Debug\Mitov.BasicLab.dll
+C:\Users\user\Downloads\C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\bin\Debug\Mitov.PlotLabBasic.dll
+C:\Users\user\Downloads\C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csprojResolveAssemblyReference.cache
+C:\Users\user\Downloads\C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.Form1.resources
+C:\Users\user\Downloads\C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.Properties.Resources.resources
+C:\Users\user\Downloads\C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csproj.GenerateResource.Cache
+C:\Users\user\Downloads\C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.exe
+C:\Users\user\Downloads\C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.pdb
+C:\Users\mhkim\Desktop\5주차_CH8_C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\bin\Debug\BME_system_design_viewer.exe.config
+C:\Users\mhkim\Desktop\5주차_CH8_C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\bin\Debug\BME_system_design_viewer.exe
+C:\Users\mhkim\Desktop\5주차_CH8_C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\bin\Debug\BME_system_design_viewer.pdb
+C:\Users\mhkim\Desktop\5주차_CH8_C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csprojAssemblyReference.cache
+C:\Users\mhkim\Desktop\5주차_CH8_C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.Form1.resources
+C:\Users\mhkim\Desktop\5주차_CH8_C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.gameStart.resources
+C:\Users\mhkim\Desktop\5주차_CH8_C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.Properties.Resources.resources
+C:\Users\mhkim\Desktop\5주차_CH8_C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csproj.GenerateResource.cache
+C:\Users\mhkim\Desktop\5주차_CH8_C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csproj.CoreCompileInputs.cache
+C:\Users\mhkim\Desktop\5주차_CH8_C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csproj.CopyComplete
+C:\Users\mhkim\Desktop\5주차_CH8_C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.exe
+C:\Users\mhkim\Desktop\5주차_CH8_C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.pdb
+C:\Users\mhkim\Desktop\5주차_CH8_C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.descriptionPage.resources
+C:\Users\mhkim\Desktop\5주차_CH8_C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.zeroBackTrain.resources
+C:\Users\mhkim\Desktop\5주차_CH8_C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.nBackTraining.resources
+C:\Users\mhkim\Desktop\5주차_CH8_C# Viewer_8조_이종헌_김진아_김민혁\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.gameResult.resources
+C:\Users\mhkim\Desktop\설계8조뷰어코드\BME_system_design_viewer\bin\Debug\BME_system_design_viewer.exe.config
+C:\Users\mhkim\Desktop\설계8조뷰어코드\BME_system_design_viewer\bin\Debug\BME_system_design_viewer.exe
+C:\Users\mhkim\Desktop\설계8조뷰어코드\BME_system_design_viewer\bin\Debug\BME_system_design_viewer.pdb
+C:\Users\mhkim\Desktop\설계8조뷰어코드\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csprojAssemblyReference.cache
+C:\Users\mhkim\Desktop\설계8조뷰어코드\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.descriptionPage.resources
+C:\Users\mhkim\Desktop\설계8조뷰어코드\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.Form1.resources
+C:\Users\mhkim\Desktop\설계8조뷰어코드\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.gameResult.resources
+C:\Users\mhkim\Desktop\설계8조뷰어코드\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.gameStart.resources
+C:\Users\mhkim\Desktop\설계8조뷰어코드\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.nBackTraining.resources
+C:\Users\mhkim\Desktop\설계8조뷰어코드\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.zeroBackTrain.resources
+C:\Users\mhkim\Desktop\설계8조뷰어코드\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.Properties.Resources.resources
+C:\Users\mhkim\Desktop\설계8조뷰어코드\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csproj.GenerateResource.cache
+C:\Users\mhkim\Desktop\설계8조뷰어코드\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csproj.CoreCompileInputs.cache
+C:\Users\mhkim\Desktop\설계8조뷰어코드\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csproj.CopyComplete
+C:\Users\mhkim\Desktop\설계8조뷰어코드\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.exe
+C:\Users\mhkim\Desktop\설계8조뷰어코드\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.pdb
+C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\bin\Debug\BME_system_design_viewer.exe.config
+C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\bin\Debug\BME_system_design_viewer.exe
+C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\bin\Debug\BME_system_design_viewer.pdb
+C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csprojAssemblyReference.cache
+C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.descriptionPage.resources
+C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.Form1.resources
+C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.gameResult.resources
+C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.gameStart.resources
+C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.nBackTraining.resources
+C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.zeroBackTrain.resources
+C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.Properties.Resources.resources
+C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csproj.GenerateResource.cache
+C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csproj.CoreCompileInputs.cache
+C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csproj.CopyComplete
+C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.exe
+C:\3학년\3학년 2학기\설계\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.pdb
