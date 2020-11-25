@@ -169,32 +169,5 @@ namespace BME_system_design_viewer
             btnOpen.Enabled = true;
             btnClose.Enabled = false;
         }
-
-        private void hi_Click(object sender, EventArgs e)
-        {
-            int randomHand = rand.Next(6);
-
-            switch (randomHand)
-            {
-                case 0:
-                    randomHand = 1;
-                    break;
-                case 1:
-                    randomHand = 2;
-                    break;
-                case 2:
-                    randomHand = 4;
-                    break;
-                case 3:
-                    randomHand = 8;
-                    break;
-                case 4:
-                    randomHand = 16;
-                    break;
-                case 5:
-                    randomHand = 32;
-                    break;
-            }
-        }
     }
 }
