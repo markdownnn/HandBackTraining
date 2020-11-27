@@ -12,9 +12,11 @@ namespace BME_system_design_viewer
 {
     public partial class Game : UserControl
     {
-        int stage = 2; // N-Back Training에서 N의 값
+        const int ONE_BACK = 1, TWO_BACK = 2, THREE_BACK = 3;
 
-        int[] pastAnswer = new int[3]; // 과거에 제시된 손동작이 저장되는 배열
+        int stage = TWO_BACK;
+
+        int[] pastAnswer = new int[3];
         int index = 0; // pastAnswer 배열에 저장된 데이터 중 몇 번째 데이터를 맞춰야 하는지
         
         int currentImage = 0; // 현재 컴퓨터가 보여주는 이미지
@@ -30,7 +32,7 @@ namespace BME_system_design_viewer
             InitializeComponent();
         }
 
-        private async void nBackTraining_Load(object sender, EventArgs e)
+        private async void initGame(object sender, EventArgs e)
         {
             initSetup();
             await firstNBack(stage);

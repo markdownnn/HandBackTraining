@@ -18,7 +18,7 @@ namespace BME_system_design_viewer
             InitializeComponent();
         }
 
-        private async void zeroBackTrain_Load(object sender, EventArgs e)
+        private async void initTutorial(object sender, EventArgs e)
         {
             userHand.SizeMode = PictureBoxSizeMode.StretchImage;
             computerHand.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -130,7 +130,6 @@ namespace BME_system_design_viewer
                     maxValue = j;
                 }
             }
-
             return maxValue;
         }
     }

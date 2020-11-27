@@ -48,7 +48,7 @@
             // 
             // SerialPort
             // 
-            this.SerialPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.SPort_DataReceived);
+            this.SerialPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.receiveData);
             // 
             // label5
             // 
@@ -94,7 +94,7 @@
             this.btnOpen.TabIndex = 10;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = true;
-            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            this.btnOpen.Click += new System.EventHandler(this.clickOpen);
             // 
             // btnClose
             // 
@@ -105,9 +105,9 @@
             this.btnClose.TabIndex = 11;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.clickClose);
             // 
-            // Form1
+            // MainForm
             // 
             this.ClientSize = new System.Drawing.Size(822, 515);
             this.Controls.Add(this.btnClose);
@@ -117,9 +117,9 @@
             this.Controls.Add(this.cboPortName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.frame);
-            this.Name = "Form1";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formClosed);
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "MainForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.closeMainForm);
+            this.Load += new System.EventHandler(this.initMainForm);
             this.ResumeLayout(false);
             this.PerformLayout();
 

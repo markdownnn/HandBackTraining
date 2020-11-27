@@ -44,9 +44,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F);
-            this.label1.Location = new System.Drawing.Point(479, 20);
+            this.label1.Location = new System.Drawing.Point(684, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 31);
+            this.label1.Size = new System.Drawing.Size(294, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "0-back Training";
             // 
@@ -54,9 +55,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(35, 36);
+            this.label2.Location = new System.Drawing.Point(50, 54);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(207, 15);
+            this.label2.Size = new System.Drawing.Size(301, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "제시된 손 모양을 따라하세요.";
             // 
@@ -65,18 +67,20 @@
             this.counter.AutoSize = true;
             this.counter.Font = new System.Drawing.Font("굴림", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.counter.ForeColor = System.Drawing.Color.Red;
-            this.counter.Location = new System.Drawing.Point(315, 139);
+            this.counter.Location = new System.Drawing.Point(450, 208);
+            this.counter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.counter.Name = "counter";
-            this.counter.Size = new System.Drawing.Size(0, 64);
+            this.counter.Size = new System.Drawing.Size(0, 96);
             this.counter.TabIndex = 9;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(518, 260);
+            this.label3.Location = new System.Drawing.Point(740, 390);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 15);
+            this.label3.Size = new System.Drawing.Size(127, 22);
             this.label3.TabIndex = 7;
             this.label3.Text = "나의 손동작";
             // 
@@ -84,41 +88,43 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(97, 260);
+            this.label4.Location = new System.Drawing.Point(139, 390);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 15);
+            this.label4.Size = new System.Drawing.Size(112, 22);
             this.label4.TabIndex = 8;
             this.label4.Text = "Follow Me!";
             // 
             // userHand
             // 
-            this.userHand.Location = new System.Drawing.Point(472, 86);
-            this.userHand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userHand.Location = new System.Drawing.Point(674, 129);
+            this.userHand.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.userHand.Name = "userHand";
-            this.userHand.Size = new System.Drawing.Size(175, 160);
+            this.userHand.Size = new System.Drawing.Size(250, 240);
             this.userHand.TabIndex = 5;
             this.userHand.TabStop = false;
             // 
             // computerHand
             // 
-            this.computerHand.Location = new System.Drawing.Point(53, 86);
-            this.computerHand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.computerHand.Location = new System.Drawing.Point(76, 129);
+            this.computerHand.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.computerHand.Name = "computerHand";
-            this.computerHand.Size = new System.Drawing.Size(175, 160);
+            this.computerHand.Size = new System.Drawing.Size(250, 240);
             this.computerHand.TabIndex = 6;
             this.computerHand.TabStop = false;
             // 
             // showComment
             // 
             this.showComment.AutoSize = true;
-            this.showComment.Location = new System.Drawing.Point(215, 324);
+            this.showComment.Location = new System.Drawing.Point(307, 486);
+            this.showComment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.showComment.Name = "showComment";
-            this.showComment.Size = new System.Drawing.Size(0, 12);
+            this.showComment.Size = new System.Drawing.Size(0, 18);
             this.showComment.TabIndex = 10;
             // 
-            // zeroBackTrain
+            // Tutorial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.showComment);
             this.Controls.Add(this.counter);
@@ -128,9 +134,10 @@
             this.Controls.Add(this.computerHand);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "zeroBackTrain";
-            this.Size = new System.Drawing.Size(700, 360);
-            this.Load += new System.EventHandler(this.zeroBackTrain_Load);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "Tutorial";
+            this.Size = new System.Drawing.Size(1000, 540);
+            this.Load += new System.EventHandler(this.initTutorial);
             ((System.ComponentModel.ISupportInitialize)(this.userHand)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.computerHand)).EndInit();
             this.ResumeLayout(false);

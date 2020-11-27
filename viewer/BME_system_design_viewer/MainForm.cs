@@ -39,12 +39,11 @@ namespace BME_system_design_viewer
             f = this;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void initMainForm(object sender, EventArgs e)
         {
             frame.Controls.Clear();
             Main main = new Main();
             frame.Controls.Add(main);
-
             setSerialPort();
         }
 
@@ -65,7 +64,7 @@ namespace BME_system_design_viewer
             CheckForIllegalCrossThreadCalls = false;
         }
 
-        private void formClosed(object sender, FormClosedEventArgs e)
+        private void closeMainForm(object sender, FormClosedEventArgs e)
         {
             if (null != sPort)
             {
@@ -78,14 +77,14 @@ namespace BME_system_design_viewer
             }
         }
 
-        private void btnOpen_Click(object sender, EventArgs e)
+        private void clickOpen(object sender, EventArgs e)
         {
             try
             {
                 if (null == sPort)
                 {
                     sPort = new SerialPort();
-                    sPort.DataReceived += new SerialDataReceivedEventHandler(SPort_DataReceived);
+                    sPort.DataReceived += new SerialDataReceivedEventHandler(receiveData);
 
                     sPort.PortName = cboPortName.SelectedItem.ToString();
                     sPort.BaudRate = Convert.ToInt32(txtBaudRate.Text);
@@ -112,7 +111,7 @@ namespace BME_system_design_viewer
             }
         }
 
-        private void SPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        private void receiveData(object sender, SerialDataReceivedEventArgs e)
         {
             while (sPort.BytesToRead > 0)
             {
@@ -154,7 +153,7 @@ namespace BME_system_design_viewer
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void clickClose(object sender, EventArgs e)
         {
             if (null != sPort)
             {
@@ -165,7 +164,6 @@ namespace BME_system_design_viewer
                     sPort = null;
                 }
             }
-
             btnOpen.Enabled = true;
             btnClose.Enabled = false;
         }

@@ -38,10 +38,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("나눔고딕", 19.8F);
-            this.label1.Location = new System.Drawing.Point(302, 41);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F);
+            this.label1.Location = new System.Drawing.Point(378, 49);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 38);
+            this.label1.Size = new System.Drawing.Size(163, 46);
             this.label1.TabIndex = 2;
             this.label1.Text = "게임 결과";
             // 
@@ -49,9 +50,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(96, 166);
+            this.label2.Location = new System.Drawing.Point(120, 199);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 19);
+            this.label2.Size = new System.Drawing.Size(105, 22);
             this.label2.TabIndex = 3;
             this.label2.Text = "맞춘 갯수";
             // 
@@ -59,9 +61,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(96, 222);
+            this.label3.Location = new System.Drawing.Point(120, 266);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 19);
+            this.label3.Size = new System.Drawing.Size(105, 22);
             this.label3.TabIndex = 3;
             this.label3.Text = "틀린 갯수";
             // 
@@ -69,9 +72,10 @@
             // 
             this.correctDisplay.AutoSize = true;
             this.correctDisplay.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.correctDisplay.Location = new System.Drawing.Point(274, 166);
+            this.correctDisplay.Location = new System.Drawing.Point(342, 199);
+            this.correctDisplay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.correctDisplay.Name = "correctDisplay";
-            this.correctDisplay.Size = new System.Drawing.Size(36, 19);
+            this.correctDisplay.Size = new System.Drawing.Size(43, 22);
             this.correctDisplay.TabIndex = 3;
             this.correctDisplay.Text = "___";
             // 
@@ -79,24 +83,26 @@
             // 
             this.wrongDisplay.AutoSize = true;
             this.wrongDisplay.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.wrongDisplay.Location = new System.Drawing.Point(274, 222);
+            this.wrongDisplay.Location = new System.Drawing.Point(342, 266);
+            this.wrongDisplay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.wrongDisplay.Name = "wrongDisplay";
-            this.wrongDisplay.Size = new System.Drawing.Size(36, 19);
+            this.wrongDisplay.Size = new System.Drawing.Size(43, 22);
             this.wrongDisplay.TabIndex = 3;
             this.wrongDisplay.Text = "___";
             // 
-            // gameResult
+            // Scoreboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.wrongDisplay);
             this.Controls.Add(this.correctDisplay);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "gameResult";
-            this.Size = new System.Drawing.Size(800, 450);
-            this.Load += new System.EventHandler(this.gameResult_Load);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "Scoreboard";
+            this.Size = new System.Drawing.Size(1000, 540);
+            this.Load += new System.EventHandler(this.initScoreBoard);
             this.ResumeLayout(false);
             this.PerformLayout();
 

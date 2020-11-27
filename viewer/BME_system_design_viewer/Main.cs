@@ -47,10 +47,5 @@ namespace BME_system_design_viewer
             pictureBox4.Image = Properties.Resources.lion;
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
         }
-
-        private void gameStart_Load(object sender, EventArgs e)
-        {
-            
-        }
     }
 }
