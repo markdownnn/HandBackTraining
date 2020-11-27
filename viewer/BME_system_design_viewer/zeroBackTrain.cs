@@ -27,11 +27,13 @@ namespace BME_system_design_viewer
             {
                 await processHandSign();
             }
+            showComment.Text = "3초 후에 자동으로 시작됩니다.";
+            await activateTimer();
             Form1.f.frame.Controls.Clear();
             nBackTraining screen4 = new nBackTraining();
             Form1.f.frame.Controls.Add(screen4);
         }
-        private Image returnImageByNum(int num) // 1부터 6까지를 받아 해당 손동작의 이미지로 반환하는 함수
+        private Image getImageByNum(int num) // 1부터 6까지를 받아 해당 손동작의 이미지로 반환하는 함수
         {
             switch (num)
             {
@@ -56,12 +58,12 @@ namespace BME_system_design_viewer
 
         private async Task processHandSign()
         {
-            computerHand.Image = returnImageByNum(currentImage);
+            computerHand.Image = getImageByNum(currentImage);
 
             await activateTimer();
             int handSign = checkHandSign(Form1.handSign, 250);
 
-            userHand.Image = returnImageByNum(handSign);
+            userHand.Image = getImageByNum(handSign);
 
             if (handSign == currentImage)
             {

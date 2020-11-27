@@ -58,7 +58,7 @@ namespace BME_system_design_viewer
             for (; index < stage; index++)
             {
                 int imageNum = rand.Next(1, 7);
-                computerHand.Image = returnImageByNum(imageNum); // 랜덤으로 결정된 이미지를 보여준다.
+                computerHand.Image = getImageByNum(imageNum); // 랜덤으로 결정된 이미지를 보여준다.
                 pastAnswer[index] = imageNum; // 위에서 보여준 이미지를 정답 배열에 저장함
                 updateIndexDisplay();
                 await Task.Delay(firstNBackDelay);
@@ -71,11 +71,11 @@ namespace BME_system_design_viewer
         private int nextNBack() // 처음 N개 이후 이미지를 하나씩 랜덤으로 보여주는 함수 
         {
             int imageNum = rand.Next(1, 7);
-            computerHand.Image = returnImageByNum(imageNum);
+            computerHand.Image = getImageByNum(imageNum);
             return imageNum;
         }
 
-        private Image returnImageByNum(int num) // 1부터 6까지를 받아 해당 손동작의 이미지로 반환하는 함수
+        private Image getImageByNum(int num) // 1부터 6까지를 받아 해당 손동작의 이미지로 반환하는 함수
         {
             switch (num)
             {
@@ -103,7 +103,7 @@ namespace BME_system_design_viewer
             await activateTimer();
             int handSign = checkHandSign(Form1.handSign, 250);
 
-            userHand.Image = returnImageByNum(handSign);
+            userHand.Image = getImageByNum(handSign);
 
             if (handSign == pastAnswer[index]) correctAnswer++;
             else wrongAnswer++;
