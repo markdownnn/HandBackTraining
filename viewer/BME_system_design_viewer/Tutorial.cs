@@ -12,7 +12,7 @@ namespace BME_system_design_viewer
 {
     public partial class Tutorial : UserControl
     {
-        int currentImage = 1;
+        int computerHand = 1;
         public Tutorial()
         {
             InitializeComponent();
@@ -20,15 +20,15 @@ namespace BME_system_design_viewer
 
         private async void initTutorial(object sender, EventArgs e)
         {
-            userHand.SizeMode = PictureBoxSizeMode.StretchImage;
-            computerHand.SizeMode = PictureBoxSizeMode.StretchImage;
-            computerHand.Focus();
-            while (currentImage <= 6)
-            {
-                await processHandSign();
-            }
+            userHandImg.SizeMode = PictureBoxSizeMode.StretchImage;
+            computerHandImg.SizeMode = PictureBoxSizeMode.StretchImage;
+            computerHandImg.Focus();
+
+            while (computerHand <= 6) await nextProblem();
+
             showComment.Text = "3초 후에 자동으로 시작됩니다.";
             await runTimer();
+
             MainForm.f.frame.Controls.Clear();
             Game game = new Game();
             MainForm.f.frame.Controls.Add(game);
@@ -56,19 +56,19 @@ namespace BME_system_design_viewer
             }
         }
 
-        private async Task processHandSign()
+        private async Task nextProblem()
         {
-            computerHand.Image = getImageByNum(currentImage);
+            computerHandImg.Image = getImageByNum(computerHand);
 
             await runTimer();
-            int handSign = checkHandSign(MainForm.handSign, 250);
+            int userHand = checkHandSign(MainForm.handSign, 250);
 
-            userHand.Image = getImageByNum(handSign);
+            userHandImg.Image = getImageByNum(userHand);
 
-            if (handSign == currentImage)
+            if (userHand == computerHand)
             {
                 showComment.Text = "맞았습니다. 계속 진행하세요!";
-                currentImage += 1;
+                computerHand += 1;
             }
             else
             {
@@ -78,13 +78,13 @@ namespace BME_system_design_viewer
 
         private async Task runTimer()
         {
-            counter.Text = "3";
+            displayCounter.Text = "3";
             await Task.Delay(1000);
-            counter.Text = "2";
+            displayCounter.Text = "2";
             await Task.Delay(1000);
-            counter.Text = "1";
+            displayCounter.Text = "1";
             await Task.Delay(1000);
-            counter.Text = "";
+            displayCounter.Text = "";
         }
 
         private int checkHandSign(int[] array, int arraySize)

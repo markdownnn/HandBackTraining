@@ -21,8 +21,8 @@ namespace BME_system_design_viewer
 
         private void initScoreBoard(object sender, EventArgs e)
         {
-            correctDisplay.Text = Convert.ToString(correct);
-            wrongDisplay.Text = Convert.ToString(wrong);
+            displayCorrect.Text = Convert.ToString(correct);
+            displayWrong.Text = Convert.ToString(wrong);
         }
     }
 }

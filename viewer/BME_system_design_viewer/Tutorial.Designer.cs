@@ -30,14 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.counter = new System.Windows.Forms.Label();
+            this.displayCounter = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.userHand = new System.Windows.Forms.PictureBox();
-            this.computerHand = new System.Windows.Forms.PictureBox();
+            this.userHandImg = new System.Windows.Forms.PictureBox();
+            this.computerHandImg = new System.Windows.Forms.PictureBox();
             this.showComment = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.userHand)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computerHand)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userHandImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computerHandImg)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -62,16 +62,16 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "제시된 손 모양을 따라하세요.";
             // 
-            // counter
+            // displayCounter
             // 
-            this.counter.AutoSize = true;
-            this.counter.Font = new System.Drawing.Font("굴림", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.counter.ForeColor = System.Drawing.Color.Red;
-            this.counter.Location = new System.Drawing.Point(450, 208);
-            this.counter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.counter.Name = "counter";
-            this.counter.Size = new System.Drawing.Size(0, 96);
-            this.counter.TabIndex = 9;
+            this.displayCounter.AutoSize = true;
+            this.displayCounter.Font = new System.Drawing.Font("굴림", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.displayCounter.ForeColor = System.Drawing.Color.Red;
+            this.displayCounter.Location = new System.Drawing.Point(450, 208);
+            this.displayCounter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.displayCounter.Name = "displayCounter";
+            this.displayCounter.Size = new System.Drawing.Size(0, 96);
+            this.displayCounter.TabIndex = 9;
             // 
             // label3
             // 
@@ -95,23 +95,23 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Follow Me!";
             // 
-            // userHand
+            // userHandImg
             // 
-            this.userHand.Location = new System.Drawing.Point(674, 129);
-            this.userHand.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.userHand.Name = "userHand";
-            this.userHand.Size = new System.Drawing.Size(250, 240);
-            this.userHand.TabIndex = 5;
-            this.userHand.TabStop = false;
+            this.userHandImg.Location = new System.Drawing.Point(674, 129);
+            this.userHandImg.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.userHandImg.Name = "userHandImg";
+            this.userHandImg.Size = new System.Drawing.Size(250, 240);
+            this.userHandImg.TabIndex = 5;
+            this.userHandImg.TabStop = false;
             // 
-            // computerHand
+            // computerHandImg
             // 
-            this.computerHand.Location = new System.Drawing.Point(76, 129);
-            this.computerHand.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.computerHand.Name = "computerHand";
-            this.computerHand.Size = new System.Drawing.Size(250, 240);
-            this.computerHand.TabIndex = 6;
-            this.computerHand.TabStop = false;
+            this.computerHandImg.Location = new System.Drawing.Point(76, 129);
+            this.computerHandImg.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.computerHandImg.Name = "computerHandImg";
+            this.computerHandImg.Size = new System.Drawing.Size(250, 240);
+            this.computerHandImg.TabIndex = 6;
+            this.computerHandImg.TabStop = false;
             // 
             // showComment
             // 
@@ -127,19 +127,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.showComment);
-            this.Controls.Add(this.counter);
+            this.Controls.Add(this.displayCounter);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.userHand);
-            this.Controls.Add(this.computerHand);
+            this.Controls.Add(this.userHandImg);
+            this.Controls.Add(this.computerHandImg);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Tutorial";
             this.Size = new System.Drawing.Size(1000, 540);
             this.Load += new System.EventHandler(this.initTutorial);
-            ((System.ComponentModel.ISupportInitialize)(this.userHand)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computerHand)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userHandImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computerHandImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,11 +149,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label counter;
+        private System.Windows.Forms.Label displayCounter;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox userHand;
-        private System.Windows.Forms.PictureBox computerHand;
+        private System.Windows.Forms.PictureBox userHandImg;
+        private System.Windows.Forms.PictureBox computerHandImg;
         private System.Windows.Forms.Label showComment;
     }
 }

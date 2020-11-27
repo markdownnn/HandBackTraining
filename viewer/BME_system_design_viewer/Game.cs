@@ -13,17 +13,16 @@ namespace BME_system_design_viewer
     public partial class Game : UserControl
     {
         const int ONE_BACK = 1, TWO_BACK = 2, THREE_BACK = 3;
+        const int GAME_ENDS_AT = 12;
+        const int DELAY = 3000;
 
         int stage = TWO_BACK;
 
         int[] pastAnswer = new int[3];
-        int index = 0; // pastAnswer 배열에 저장된 데이터 중 몇 번째 데이터를 맞춰야 하는지
+        int currentProblem = 0;
         
-        int currentImage = 0; // 현재 컴퓨터가 보여주는 이미지
-        int total = 0, correctAnswer = 0, wrongAnswer = 0; // 점수를 저장
-
-        const int gameEnd = 12; // 12개의 그림을 보여주면 게임 끝
-        const int firstNBackDelay = 3000; // 3초마다 새로운 그림을 보여줌
+        int computerHand = 0;
+        int correctAnswer = 0, wrongAnswer = 0, totalAnswer = 0;
 
         Random rand = new Random();
 
@@ -32,52 +31,44 @@ namespace BME_system_design_viewer
             InitializeComponent();
         }
 
+        private void initSetup()
+        {
+            computerHandImg.SizeMode = PictureBoxSizeMode.StretchImage;
+            userHandImg.SizeMode = PictureBoxSizeMode.StretchImage;
+            displayStage.Text = Convert.ToString(stage);
+        }
+
         private async void initGame(object sender, EventArgs e)
         {
             initSetup();
-            await firstNBack(stage);
-            currentImage = nextNBack();
-            while (true)
+            await firstProblems();
+            computerHand = getNextProblem();
+            while (true) await nextProblem();
+        }
+
+        private async Task firstProblems()
+        {
+            for (; currentProblem < stage; currentProblem++)
             {
-                await processHandSign();
+                computerHand = rand.Next(1, 7);
+                computerHandImg.Image = getImageByNum(computerHand);
+                pastAnswer[currentProblem] = computerHand;
+                showCurrentProblem();
+                await Task.Delay(DELAY);
             }
+            currentProblem = 0;
+            userHandImg.Focus();
+            showCurrentProblem();
         }
 
-        private void initSetup()
+        private int getNextProblem()
         {
-            computerHand.SizeMode = PictureBoxSizeMode.StretchImage;
-            userHand.SizeMode = PictureBoxSizeMode.StretchImage;
-            stageDisplay.Text = Convert.ToString(stage);
+            computerHand = rand.Next(1, 7);
+            computerHandImg.Image = getImageByNum(computerHand);
+            return computerHand;
         }
 
-        private void updateIndexDisplay() // 화면에 index 변수를 출력함. 3-Back의 경우 0, 1, 2가 반복됨
-        {
-            indexDisplay.Text = Convert.ToString(index);
-        }
-
-        private async Task firstNBack(int stage) // 처음 N개를 3초에 하나씩 보여주는 함수
-        {
-            for (; index < stage; index++)
-            {
-                int imageNum = rand.Next(1, 7);
-                computerHand.Image = getImageByNum(imageNum); // 랜덤으로 결정된 이미지를 보여준다.
-                pastAnswer[index] = imageNum; // 위에서 보여준 이미지를 정답 배열에 저장함
-                updateIndexDisplay();
-                await Task.Delay(firstNBackDelay);
-            }
-            index = 0; // 처음 N개를 보여줬으므로 인덱스를 다시 0으로 만든다.
-            userHand.Focus();
-            updateIndexDisplay();
-        }
-
-        private int nextNBack() // 처음 N개 이후 이미지를 하나씩 랜덤으로 보여주는 함수 
-        {
-            int imageNum = rand.Next(1, 7);
-            computerHand.Image = getImageByNum(imageNum);
-            return imageNum;
-        }
-
-        private Image getImageByNum(int num) // 1부터 6까지를 받아 해당 손동작의 이미지로 반환하는 함수
+        private Image getImageByNum(int num)
         {
             switch (num)
             {
@@ -100,43 +91,49 @@ namespace BME_system_design_viewer
             }
         }
 
-        private async Task processHandSign()
+        private async Task nextProblem()
         {
             await runTimer();
-            int handSign = checkHandSign(MainForm.handSign, 250);
+            int userHand = getUserHand(MainForm.handSign, 250);
 
-            userHand.Image = getImageByNum(handSign);
+            userHandImg.Image = getImageByNum(userHand);
 
-            if (handSign == pastAnswer[index]) correctAnswer++;
+            if (userHand == pastAnswer[currentProblem]) correctAnswer++;
             else wrongAnswer++;
 
-            pastAnswer[index++] = currentImage;
-            currentImage = nextNBack();
-            if (index >= stage) index = 0;
+            pastAnswer[currentProblem++] = computerHand;
+            computerHand = getNextProblem();
+            if (currentProblem >= stage) currentProblem = 0;
 
-            updateIndexDisplay();
-            if (++total == gameEnd)
+            showCurrentProblem();
+
+            if (++totalAnswer == GAME_ENDS_AT)
             {
                 MainForm.f.frame.Controls.Clear();
                 Scoreboard scoreboard = new Scoreboard();
-                scoreboard.correct = correctAnswer; // 변수 전달
-                scoreboard.wrong = wrongAnswer; // 변수 전달
+                scoreboard.correct = correctAnswer;
+                scoreboard.wrong = wrongAnswer;
                 MainForm.f.frame.Controls.Add(scoreboard);
             }
         }
 
-        private async Task runTimer()
+        private void showCurrentProblem()
         {
-            counter.Text = "3";
-            await Task.Delay(1000);
-            counter.Text = "2";
-            await Task.Delay(1000);
-            counter.Text = "1";
-            await Task.Delay(1000);
-            counter.Text = "";
+            displayCurrentProblem.Text = Convert.ToString(currentProblem);
         }
 
-        private int checkHandSign(int[] array, int arraySize)
+        private async Task runTimer()
+        {
+            displayCounter.Text = "3";
+            await Task.Delay(1000);
+            displayCounter.Text = "2";
+            await Task.Delay(1000);
+            displayCounter.Text = "1";
+            await Task.Delay(1000);
+            displayCounter.Text = "";
+        }
+
+        private int getUserHand(int[] array, int arraySize)
         {
             int[] action = new int[7];
             int frequency = 0, maxValue = 0;

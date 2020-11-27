@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.computerHand = new System.Windows.Forms.PictureBox();
-            this.userHand = new System.Windows.Forms.PictureBox();
+            this.computerHandImg = new System.Windows.Forms.PictureBox();
+            this.userHandImg = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.stageDisplay = new System.Windows.Forms.Label();
-            this.indexDisplay = new System.Windows.Forms.Label();
-            this.counter = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.computerHand)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userHand)).BeginInit();
+            this.displayStage = new System.Windows.Forms.Label();
+            this.displayCurrentProblem = new System.Windows.Forms.Label();
+            this.displayCounter = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.computerHandImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userHandImg)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -52,23 +52,23 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "N-back Training";
             // 
-            // computerHand
+            // computerHandImg
             // 
-            this.computerHand.Location = new System.Drawing.Point(94, 150);
-            this.computerHand.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.computerHand.Name = "computerHand";
-            this.computerHand.Size = new System.Drawing.Size(250, 240);
-            this.computerHand.TabIndex = 2;
-            this.computerHand.TabStop = false;
+            this.computerHandImg.Location = new System.Drawing.Point(94, 150);
+            this.computerHandImg.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.computerHandImg.Name = "computerHandImg";
+            this.computerHandImg.Size = new System.Drawing.Size(250, 240);
+            this.computerHandImg.TabIndex = 2;
+            this.computerHandImg.TabStop = false;
             // 
-            // userHand
+            // userHandImg
             // 
-            this.userHand.Location = new System.Drawing.Point(693, 150);
-            this.userHand.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.userHand.Name = "userHand";
-            this.userHand.Size = new System.Drawing.Size(250, 240);
-            this.userHand.TabIndex = 2;
-            this.userHand.TabStop = false;
+            this.userHandImg.Location = new System.Drawing.Point(693, 150);
+            this.userHandImg.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.userHandImg.Name = "userHandImg";
+            this.userHandImg.Size = new System.Drawing.Size(250, 240);
+            this.userHandImg.TabIndex = 2;
+            this.userHandImg.TabStop = false;
             // 
             // label2
             // 
@@ -103,58 +103,58 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "난이도";
             // 
-            // stageDisplay
+            // displayStage
             // 
-            this.stageDisplay.AutoSize = true;
-            this.stageDisplay.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.stageDisplay.Location = new System.Drawing.Point(849, 93);
-            this.stageDisplay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.stageDisplay.Name = "stageDisplay";
-            this.stageDisplay.Size = new System.Drawing.Size(43, 22);
-            this.stageDisplay.TabIndex = 3;
-            this.stageDisplay.Text = "___";
+            this.displayStage.AutoSize = true;
+            this.displayStage.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.displayStage.Location = new System.Drawing.Point(849, 93);
+            this.displayStage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.displayStage.Name = "displayStage";
+            this.displayStage.Size = new System.Drawing.Size(43, 22);
+            this.displayStage.TabIndex = 3;
+            this.displayStage.Text = "___";
             // 
-            // indexDisplay
+            // displayCurrentProblem
             // 
-            this.indexDisplay.AutoSize = true;
-            this.indexDisplay.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.indexDisplay.Location = new System.Drawing.Point(194, 111);
-            this.indexDisplay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.indexDisplay.Name = "indexDisplay";
-            this.indexDisplay.Size = new System.Drawing.Size(43, 22);
-            this.indexDisplay.TabIndex = 3;
-            this.indexDisplay.Text = "___";
+            this.displayCurrentProblem.AutoSize = true;
+            this.displayCurrentProblem.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.displayCurrentProblem.Location = new System.Drawing.Point(194, 111);
+            this.displayCurrentProblem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.displayCurrentProblem.Name = "displayCurrentProblem";
+            this.displayCurrentProblem.Size = new System.Drawing.Size(43, 22);
+            this.displayCurrentProblem.TabIndex = 3;
+            this.displayCurrentProblem.Text = "___";
             // 
-            // counter
+            // displayCounter
             // 
-            this.counter.AutoSize = true;
-            this.counter.Font = new System.Drawing.Font("굴림", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.counter.ForeColor = System.Drawing.Color.Red;
-            this.counter.Location = new System.Drawing.Point(469, 230);
-            this.counter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.counter.Name = "counter";
-            this.counter.Size = new System.Drawing.Size(0, 96);
-            this.counter.TabIndex = 4;
+            this.displayCounter.AutoSize = true;
+            this.displayCounter.Font = new System.Drawing.Font("굴림", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.displayCounter.ForeColor = System.Drawing.Color.Red;
+            this.displayCounter.Location = new System.Drawing.Point(469, 230);
+            this.displayCounter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.displayCounter.Name = "displayCounter";
+            this.displayCounter.Size = new System.Drawing.Size(0, 96);
+            this.displayCounter.TabIndex = 4;
             // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.counter);
+            this.Controls.Add(this.displayCounter);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.stageDisplay);
+            this.Controls.Add(this.displayStage);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.indexDisplay);
+            this.Controls.Add(this.displayCurrentProblem);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.userHand);
-            this.Controls.Add(this.computerHand);
+            this.Controls.Add(this.userHandImg);
+            this.Controls.Add(this.computerHandImg);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Game";
             this.Size = new System.Drawing.Size(1000, 540);
             this.Load += new System.EventHandler(this.initGame);
-            ((System.ComponentModel.ISupportInitialize)(this.computerHand)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userHand)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computerHandImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userHandImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,13 +163,13 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox computerHand;
-        private System.Windows.Forms.PictureBox userHand;
+        private System.Windows.Forms.PictureBox computerHandImg;
+        private System.Windows.Forms.PictureBox userHandImg;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label stageDisplay;
-        private System.Windows.Forms.Label indexDisplay;
-        private System.Windows.Forms.Label counter;
+        private System.Windows.Forms.Label displayStage;
+        private System.Windows.Forms.Label displayCurrentProblem;
+        private System.Windows.Forms.Label displayCounter;
     }
 }
