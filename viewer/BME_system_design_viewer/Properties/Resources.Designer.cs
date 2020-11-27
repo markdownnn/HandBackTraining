@@ -72,9 +72,9 @@ namespace BME_system_design_viewer.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap descriptionButton {
+        internal static System.Drawing.Bitmap description_button {
             get {
-                object obj = ResourceManager.GetObject("descriptionButton", resourceCulture);
+                object obj = ResourceManager.GetObject("description_button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -152,9 +152,9 @@ namespace BME_system_design_viewer.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap lion1 {
+        internal static System.Drawing.Bitmap lion {
             get {
-                object obj = ResourceManager.GetObject("lion1", resourceCulture);
+                object obj = ResourceManager.GetObject("lion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -162,9 +162,9 @@ namespace BME_system_design_viewer.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap quitButton {
+        internal static System.Drawing.Bitmap quit_button {
             get {
-                object obj = ResourceManager.GetObject("quitButton", resourceCulture);
+                object obj = ResourceManager.GetObject("quit_button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -172,9 +172,9 @@ namespace BME_system_design_viewer.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap startButton {
+        internal static System.Drawing.Bitmap start_button {
             get {
-                object obj = ResourceManager.GetObject("startButton", resourceCulture);
+                object obj = ResourceManager.GetObject("start_button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
