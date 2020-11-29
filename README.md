@@ -1,2 +1,2 @@
-# 생체시스템설계프로젝트 8조
-저희 조에서 진행하는 주제 "손으로 하는 N-Back Training" 소스 코드입니다.
+# Hand Back Training
+2020-2 설계 프로젝트 8조 "손으로 하는 N-Back Training" 소스 코드입니다.
