@@ -35,8 +35,8 @@
             this.cboPortName = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtBaudRate = new System.Windows.Forms.TextBox();
-            this.btnOpen = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.openBtn = new System.Windows.Forms.Button();
+            this.closeBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // frame
@@ -85,33 +85,33 @@
             this.txtBaudRate.Size = new System.Drawing.Size(114, 28);
             this.txtBaudRate.TabIndex = 9;
             // 
-            // btnOpen
+            // openBtn
             // 
-            this.btnOpen.Location = new System.Drawing.Point(451, 475);
-            this.btnOpen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(86, 29);
-            this.btnOpen.TabIndex = 10;
-            this.btnOpen.Text = "Open";
-            this.btnOpen.UseVisualStyleBackColor = true;
-            this.btnOpen.Click += new System.EventHandler(this.clickOpen);
+            this.openBtn.Location = new System.Drawing.Point(451, 475);
+            this.openBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.openBtn.Name = "openBtn";
+            this.openBtn.Size = new System.Drawing.Size(86, 29);
+            this.openBtn.TabIndex = 10;
+            this.openBtn.Text = "Open";
+            this.openBtn.UseVisualStyleBackColor = true;
+            this.openBtn.Click += new System.EventHandler(this.clickOpen);
             // 
-            // btnClose
+            // closeBtn
             // 
-            this.btnClose.Location = new System.Drawing.Point(554, 475);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(86, 29);
-            this.btnClose.TabIndex = 11;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.clickClose);
+            this.closeBtn.Location = new System.Drawing.Point(554, 475);
+            this.closeBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(86, 29);
+            this.closeBtn.TabIndex = 11;
+            this.closeBtn.Text = "Close";
+            this.closeBtn.UseVisualStyleBackColor = true;
+            this.closeBtn.Click += new System.EventHandler(this.clickClose);
             // 
             // MainForm
             // 
             this.ClientSize = new System.Drawing.Size(822, 515);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnOpen);
+            this.Controls.Add(this.closeBtn);
+            this.Controls.Add(this.openBtn);
             this.Controls.Add(this.txtBaudRate);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cboPortName);
@@ -133,8 +133,8 @@
         private System.Windows.Forms.ComboBox cboPortName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBaudRate;
-        private System.Windows.Forms.Button btnOpen;
-        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button openBtn;
+        private System.Windows.Forms.Button closeBtn;
     }
 }
 

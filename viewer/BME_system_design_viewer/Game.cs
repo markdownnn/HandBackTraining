@@ -9,7 +9,7 @@ namespace BME_system_design_viewer
     {
         const int ONE_BACK = 1, TWO_BACK = 2, THREE_BACK = 3;
         const int GAME_ENDS_AT = 12;
-        const int DELAY = 3000;
+        const int DELAY_BETWEEN_PROBLEMS = 3000;
 
         int stage = TWO_BACK;
 
@@ -26,37 +26,37 @@ namespace BME_system_design_viewer
             InitializeComponent();
         }
 
-        private void initSetup()
+        private void initLabelAndImage()
         {
             computerHandImg.SizeMode = PictureBoxSizeMode.StretchImage;
             userHandImg.SizeMode = PictureBoxSizeMode.StretchImage;
-            displayStage.Text = Convert.ToString(stage);
+            stageLabel.Text = Convert.ToString(stage);
         }
 
         private async void initGame(object sender, EventArgs e)
         {
-            initSetup();
+            initLabelAndImage();
             await firstProblems();
-            computerHand = getNextProblem();
+            computerHand = getNextComputerHand();
             while (true) await nextProblem();
         }
 
-        private async Task firstProblems()
+        private async Task firstProblems() // 처음 N개를 보여줄 땐, 입력을 받지 않으므로 이 함수로 처리
         {
             for (; currentProblem < stage; currentProblem++)
             {
                 computerHand = rand.Next(1, 7);
                 computerHandImg.Image = getImageByNum(computerHand);
                 pastAnswer[currentProblem] = computerHand;
-                showCurrentProblem();
-                await Task.Delay(DELAY);
+                currentProblemLabel.Text = Convert.ToString(currentProblem);
+                await Task.Delay(DELAY_BETWEEN_PROBLEMS);
             }
             currentProblem = 0;
+            currentProblemLabel.Text = "0";
             userHandImg.Focus();
-            showCurrentProblem();
         }
 
-        private int getNextProblem()
+        private int getNextComputerHand()
         {
             computerHand = rand.Next(1, 7);
             computerHandImg.Image = getImageByNum(computerHand);
@@ -97,10 +97,10 @@ namespace BME_system_design_viewer
             else wrongAnswer++;
 
             pastAnswer[currentProblem++] = computerHand;
-            computerHand = getNextProblem();
+            computerHand = getNextComputerHand();
             if (currentProblem >= stage) currentProblem = 0;
 
-            showCurrentProblem();
+            currentProblemLabel.Text = Convert.ToString(currentProblem);
 
             if (++totalAnswer == GAME_ENDS_AT)
             {
@@ -112,20 +112,15 @@ namespace BME_system_design_viewer
             }
         }
 
-        private void showCurrentProblem()
-        {
-            displayCurrentProblem.Text = Convert.ToString(currentProblem);
-        }
-
         private async Task runTimer()
         {
-            displayCounter.Text = "3";
+            counterLabel.Text = "3";
             await Task.Delay(1000);
-            displayCounter.Text = "2";
+            counterLabel.Text = "2";
             await Task.Delay(1000);
-            displayCounter.Text = "1";
+            counterLabel.Text = "1";
             await Task.Delay(1000);
-            displayCounter.Text = "";
+            counterLabel.Text = "";
         }
 
         private int getUserHand(int[] array, int arraySize)

@@ -41,8 +41,8 @@ namespace BME_system_design_viewer
 
         private void setSerialPort()
         {
-            btnOpen.Enabled = true;
-            btnClose.Enabled = false;
+            openBtn.Enabled = true;
+            closeBtn.Enabled = false;
             cboPortName.BeginUpdate();
             foreach (string comport in SerialPort.GetPortNames())
             {
@@ -88,13 +88,13 @@ namespace BME_system_design_viewer
 
                 if (sPort.IsOpen)
                 {
-                    btnOpen.Enabled = false;
-                    btnClose.Enabled = true;
+                    openBtn.Enabled = false;
+                    closeBtn.Enabled = true;
                 }
                 else
                 {
-                    btnOpen.Enabled = true;
-                    btnClose.Enabled = false;
+                    openBtn.Enabled = true;
+                    closeBtn.Enabled = false;
                 }
             }
             catch (System.Exception ex)
@@ -156,8 +156,8 @@ namespace BME_system_design_viewer
                     sPort = null;
                 }
             }
-            btnOpen.Enabled = true;
-            btnClose.Enabled = false;
+            openBtn.Enabled = true;
+            closeBtn.Enabled = false;
         }
     }
 }

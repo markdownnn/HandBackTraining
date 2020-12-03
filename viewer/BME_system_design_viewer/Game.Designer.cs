@@ -34,9 +34,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.displayStage = new System.Windows.Forms.Label();
-            this.displayCurrentProblem = new System.Windows.Forms.Label();
-            this.displayCounter = new System.Windows.Forms.Label();
+            this.stageLabel = new System.Windows.Forms.Label();
+            this.currentProblemLabel = new System.Windows.Forms.Label();
+            this.counterLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.computerHandImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userHandImg)).BeginInit();
             this.SuspendLayout();
@@ -103,48 +103,48 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "난이도";
             // 
-            // displayStage
+            // stageLabel
             // 
-            this.displayStage.AutoSize = true;
-            this.displayStage.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.displayStage.Location = new System.Drawing.Point(849, 93);
-            this.displayStage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.displayStage.Name = "displayStage";
-            this.displayStage.Size = new System.Drawing.Size(43, 22);
-            this.displayStage.TabIndex = 3;
-            this.displayStage.Text = "___";
+            this.stageLabel.AutoSize = true;
+            this.stageLabel.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.stageLabel.Location = new System.Drawing.Point(849, 93);
+            this.stageLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.stageLabel.Name = "stageLabel";
+            this.stageLabel.Size = new System.Drawing.Size(43, 22);
+            this.stageLabel.TabIndex = 3;
+            this.stageLabel.Text = "___";
             // 
-            // displayCurrentProblem
+            // currentProblemLabel
             // 
-            this.displayCurrentProblem.AutoSize = true;
-            this.displayCurrentProblem.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.displayCurrentProblem.Location = new System.Drawing.Point(194, 111);
-            this.displayCurrentProblem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.displayCurrentProblem.Name = "displayCurrentProblem";
-            this.displayCurrentProblem.Size = new System.Drawing.Size(43, 22);
-            this.displayCurrentProblem.TabIndex = 3;
-            this.displayCurrentProblem.Text = "___";
+            this.currentProblemLabel.AutoSize = true;
+            this.currentProblemLabel.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.currentProblemLabel.Location = new System.Drawing.Point(194, 111);
+            this.currentProblemLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.currentProblemLabel.Name = "currentProblemLabel";
+            this.currentProblemLabel.Size = new System.Drawing.Size(43, 22);
+            this.currentProblemLabel.TabIndex = 3;
+            this.currentProblemLabel.Text = "___";
             // 
-            // displayCounter
+            // counterLabel
             // 
-            this.displayCounter.AutoSize = true;
-            this.displayCounter.Font = new System.Drawing.Font("굴림", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.displayCounter.ForeColor = System.Drawing.Color.Red;
-            this.displayCounter.Location = new System.Drawing.Point(469, 230);
-            this.displayCounter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.displayCounter.Name = "displayCounter";
-            this.displayCounter.Size = new System.Drawing.Size(0, 96);
-            this.displayCounter.TabIndex = 4;
+            this.counterLabel.AutoSize = true;
+            this.counterLabel.Font = new System.Drawing.Font("굴림", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.counterLabel.ForeColor = System.Drawing.Color.Red;
+            this.counterLabel.Location = new System.Drawing.Point(469, 230);
+            this.counterLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.counterLabel.Name = "counterLabel";
+            this.counterLabel.Size = new System.Drawing.Size(0, 96);
+            this.counterLabel.TabIndex = 4;
             // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.displayCounter);
+            this.Controls.Add(this.counterLabel);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.displayStage);
+            this.Controls.Add(this.stageLabel);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.displayCurrentProblem);
+            this.Controls.Add(this.currentProblemLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.userHandImg);
             this.Controls.Add(this.computerHandImg);
@@ -168,8 +168,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label displayStage;
-        private System.Windows.Forms.Label displayCurrentProblem;
-        private System.Windows.Forms.Label displayCounter;
+        private System.Windows.Forms.Label stageLabel;
+        private System.Windows.Forms.Label currentProblemLabel;
+        private System.Windows.Forms.Label counterLabel;
     }
 }

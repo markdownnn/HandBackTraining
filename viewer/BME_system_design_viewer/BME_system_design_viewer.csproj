@@ -162,5 +162,11 @@
   <ItemGroup>
     <None Include="Resources\start_button.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\titleImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usbImage.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

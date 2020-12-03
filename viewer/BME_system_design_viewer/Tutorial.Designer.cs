@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.displayCounter = new System.Windows.Forms.Label();
+            this.counterLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.userHandImg = new System.Windows.Forms.PictureBox();
@@ -62,16 +62,16 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "제시된 손 모양을 따라하세요.";
             // 
-            // displayCounter
+            // counterLabel
             // 
-            this.displayCounter.AutoSize = true;
-            this.displayCounter.Font = new System.Drawing.Font("굴림", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.displayCounter.ForeColor = System.Drawing.Color.Red;
-            this.displayCounter.Location = new System.Drawing.Point(450, 208);
-            this.displayCounter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.displayCounter.Name = "displayCounter";
-            this.displayCounter.Size = new System.Drawing.Size(0, 96);
-            this.displayCounter.TabIndex = 9;
+            this.counterLabel.AutoSize = true;
+            this.counterLabel.Font = new System.Drawing.Font("굴림", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.counterLabel.ForeColor = System.Drawing.Color.Red;
+            this.counterLabel.Location = new System.Drawing.Point(450, 208);
+            this.counterLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.counterLabel.Name = "counterLabel";
+            this.counterLabel.Size = new System.Drawing.Size(0, 96);
+            this.counterLabel.TabIndex = 9;
             // 
             // label3
             // 
@@ -127,14 +127,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.showComment);
-            this.Controls.Add(this.displayCounter);
+            this.Controls.Add(this.counterLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.userHandImg);
             this.Controls.Add(this.computerHandImg);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Tutorial";
             this.Size = new System.Drawing.Size(1000, 540);
             this.Load += new System.EventHandler(this.initTutorial);
@@ -149,7 +149,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label displayCounter;
+        private System.Windows.Forms.Label counterLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox userHandImg;

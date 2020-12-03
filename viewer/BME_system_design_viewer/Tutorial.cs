@@ -56,7 +56,7 @@ namespace BME_system_design_viewer
             computerHandImg.Image = getImageByNum(computerHand);
 
             await runTimer();
-            int userHand = checkHandSign(MainForm.handSign, 250);
+            int userHand = getUserHand(MainForm.handSign, 250);
 
             userHandImg.Image = getImageByNum(userHand);
 
@@ -73,16 +73,16 @@ namespace BME_system_design_viewer
 
         private async Task runTimer()
         {
-            displayCounter.Text = "3";
+            counterLabel.Text = "3";
             await Task.Delay(1000);
-            displayCounter.Text = "2";
+            counterLabel.Text = "2";
             await Task.Delay(1000);
-            displayCounter.Text = "1";
+            counterLabel.Text = "1";
             await Task.Delay(1000);
-            displayCounter.Text = "";
+            counterLabel.Text = "";
         }
 
-        private int checkHandSign(int[] array, int arraySize)
+        private int getUserHand(int[] array, int arraySize)
         {
             int[] action = new int[7];
             int frequency = 0, maxValue = 0;

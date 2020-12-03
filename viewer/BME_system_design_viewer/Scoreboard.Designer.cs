@@ -31,8 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.displayCorrect = new System.Windows.Forms.Label();
-            this.displayWrong = new System.Windows.Forms.Label();
+            this.correctLabel = new System.Windows.Forms.Label();
+            this.wrongLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -68,38 +68,38 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "틀린 갯수";
             // 
-            // displayCorrect
+            // correctLabel
             // 
-            this.displayCorrect.AutoSize = true;
-            this.displayCorrect.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.displayCorrect.Location = new System.Drawing.Point(342, 199);
-            this.displayCorrect.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.displayCorrect.Name = "displayCorrect";
-            this.displayCorrect.Size = new System.Drawing.Size(43, 22);
-            this.displayCorrect.TabIndex = 3;
-            this.displayCorrect.Text = "___";
+            this.correctLabel.AutoSize = true;
+            this.correctLabel.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.correctLabel.Location = new System.Drawing.Point(342, 199);
+            this.correctLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.correctLabel.Name = "correctLabel";
+            this.correctLabel.Size = new System.Drawing.Size(43, 22);
+            this.correctLabel.TabIndex = 3;
+            this.correctLabel.Text = "___";
             // 
-            // displayWrong
+            // wrongLabel
             // 
-            this.displayWrong.AutoSize = true;
-            this.displayWrong.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.displayWrong.Location = new System.Drawing.Point(342, 266);
-            this.displayWrong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.displayWrong.Name = "displayWrong";
-            this.displayWrong.Size = new System.Drawing.Size(43, 22);
-            this.displayWrong.TabIndex = 3;
-            this.displayWrong.Text = "___";
+            this.wrongLabel.AutoSize = true;
+            this.wrongLabel.Font = new System.Drawing.Font("굴림", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.wrongLabel.Location = new System.Drawing.Point(342, 266);
+            this.wrongLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.wrongLabel.Name = "wrongLabel";
+            this.wrongLabel.Size = new System.Drawing.Size(43, 22);
+            this.wrongLabel.TabIndex = 3;
+            this.wrongLabel.Text = "___";
             // 
             // Scoreboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.displayWrong);
-            this.Controls.Add(this.displayCorrect);
+            this.Controls.Add(this.wrongLabel);
+            this.Controls.Add(this.correctLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Scoreboard";
             this.Size = new System.Drawing.Size(1000, 540);
             this.Load += new System.EventHandler(this.initScoreBoard);
@@ -113,7 +113,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label displayCorrect;
-        private System.Windows.Forms.Label displayWrong;
+        private System.Windows.Forms.Label correctLabel;
+        private System.Windows.Forms.Label wrongLabel;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Threading.Tasks;
 
 namespace BME_system_design_viewer
 {
@@ -9,6 +10,15 @@ namespace BME_system_design_viewer
         {
             InitializeComponent();
             loadImages();
+        }
+
+        private async void mainLoad(object sender, EventArgs e)
+        {
+            while (true)
+            {
+                await Task.Delay(500);
+                chooseMenu(getUserHand(MainForm.handSign, 250));
+            }
         }
 
         private void startClicked(object sender, EventArgs e)
@@ -30,14 +40,89 @@ namespace BME_system_design_viewer
         }
         private void loadImages()
         {
-            pictureBox1.Image = Properties.Resources.start_button;
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.Image = Properties.Resources.description_button;
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.Image = Properties.Resources.quit_button;
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.Image = Properties.Resources.lion;
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            startBtn.Image = Properties.Resources.start_button;
+            startBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+            descriptionBtn.Image = Properties.Resources.description_button;
+            descriptionBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+            exitBtn.Image = Properties.Resources.quit_button;
+            exitBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+            lionImg.Image = Properties.Resources.lion;
+            lionImg.SizeMode = PictureBoxSizeMode.StretchImage;
+            startImg.Image = Properties.Resources.hand_rock;
+            startImg.SizeMode = PictureBoxSizeMode.StretchImage;
+            descriptionImg.Image = Properties.Resources.hand_scissors;
+            descriptionImg.SizeMode = PictureBoxSizeMode.StretchImage;
+            exitImg.Image = Properties.Resources.hand_phone;
+            exitImg.SizeMode = PictureBoxSizeMode.StretchImage;
+            titleImg.Image = Properties.Resources.titleImage;
+            titleImg.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+
+        private void chooseMenu(int hand)
+        {
+            switch (hand)
+            {
+                case 1:
+                    MainForm.f.frame.Controls.Clear();
+                    Tutorial tutorial = new Tutorial();
+                    MainForm.f.frame.Controls.Add(tutorial);
+                    break;
+                case 3:
+                    MainForm.f.frame.Controls.Clear();
+                    Description description = new Description();
+                    MainForm.f.frame.Controls.Add(description);
+                    break;
+                case 5:
+                    Application.Exit();
+                    break;
+            }
+        }
+
+        private int getUserHand(int[] array, int arraySize)
+        {
+            int[] action = new int[7];
+            int frequency = 0, maxValue = 0;
+
+            for (int i = 0; i < arraySize; i++)
+            {
+                switch (array[i])
+                {
+                    case 0:
+                        action[0]++;
+                        break;
+                    case 1:
+                        action[1]++;
+                        break;
+                    case 2:
+                        action[2]++;
+                        break;
+                    case 4:
+                        action[3]++;
+                        break;
+                    case 8:
+                        action[4]++;
+                        break;
+                    case 16:
+                        action[5]++;
+                        break;
+                    case 32:
+                        action[6]++;
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            for (int j = 0; j < 7; j++)
+            {
+                if (frequency <= action[j])
+                {
+                    frequency = action[j];
+                    maxValue = j;
+                }
+            }
+
+            return maxValue;
         }
     }
 }
