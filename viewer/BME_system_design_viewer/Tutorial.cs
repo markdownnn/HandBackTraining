@@ -17,6 +17,10 @@ namespace BME_system_design_viewer
         {
             userHandImg.SizeMode = PictureBoxSizeMode.StretchImage;
             computerHandImg.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            gameImg.SizeMode = PictureBoxSizeMode.StretchImage;
+            gameImg.Image = Properties.Resources.tutorial;
+
             computerHandImg.Focus();
 
             while (computerHand <= 6) await nextProblem();

@@ -24,8 +24,8 @@ namespace BME_system_design_viewer
         private void startClicked(object sender, EventArgs e)
         {
             MainForm.f.frame.Controls.Clear();
-            Tutorial tutorial = new Tutorial();
-            MainForm.f.frame.Controls.Add(tutorial);
+            Game game = new Game();
+            MainForm.f.frame.Controls.Add(game);
         }
 
         private void descriptionClicked(object sender, EventArgs e)

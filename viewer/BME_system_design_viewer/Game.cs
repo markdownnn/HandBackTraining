@@ -9,9 +9,8 @@ namespace BME_system_design_viewer
     {
         const int ONE_BACK = 1, TWO_BACK = 2, THREE_BACK = 3;
         const int GAME_ENDS_AT = 12;
-        const int DELAY_BETWEEN_PROBLEMS = 3000;
 
-        int stage = TWO_BACK;
+        public int stage = TWO_BACK;
 
         int[] pastAnswer = new int[3];
         int currentProblem = 0;
@@ -31,6 +30,12 @@ namespace BME_system_design_viewer
             computerHandImg.SizeMode = PictureBoxSizeMode.StretchImage;
             userHandImg.SizeMode = PictureBoxSizeMode.StretchImage;
             stageLabel.Text = Convert.ToString(stage);
+            gameImg.SizeMode = PictureBoxSizeMode.StretchImage;
+            gameImg.Image = Properties.Resources.game;
+            levelUpImg.SizeMode = PictureBoxSizeMode.StretchImage;
+            levelUpImg.Image = Properties.Resources.level_up;
+            levelDownImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            levelDownImage.Image = Properties.Resources.level_down;
         }
 
         private async void initGame(object sender, EventArgs e)
@@ -48,11 +53,9 @@ namespace BME_system_design_viewer
                 computerHand = rand.Next(1, 7);
                 computerHandImg.Image = getImageByNum(computerHand);
                 pastAnswer[currentProblem] = computerHand;
-                currentProblemLabel.Text = Convert.ToString(currentProblem);
-                await Task.Delay(DELAY_BETWEEN_PROBLEMS);
+                await runTimer();
             }
             currentProblem = 0;
-            currentProblemLabel.Text = "0";
             userHandImg.Focus();
         }
 
@@ -61,6 +64,27 @@ namespace BME_system_design_viewer
             computerHand = rand.Next(1, 7);
             computerHandImg.Image = getImageByNum(computerHand);
             return computerHand;
+        }
+
+        private void levelUpImg_Click(object sender, EventArgs e)
+        {
+            if (stage < 3) {
+                MainForm.f.frame.Controls.Clear();
+                Game newGame = new Game();
+                newGame.stage = stage + 1;
+                MainForm.f.frame.Controls.Add(newGame);
+            }
+        }
+
+        private void levelDownImage_Click(object sender, EventArgs e)
+        {
+            if (stage > 1)
+            {
+                MainForm.f.frame.Controls.Clear();
+                Game newGame = new Game();
+                newGame.stage = stage - 1;
+                MainForm.f.frame.Controls.Add(newGame);
+            }
         }
 
         private Image getImageByNum(int num)
@@ -99,8 +123,6 @@ namespace BME_system_design_viewer
             pastAnswer[currentProblem++] = computerHand;
             computerHand = getNextComputerHand();
             if (currentProblem >= stage) currentProblem = 0;
-
-            currentProblemLabel.Text = Convert.ToString(currentProblem);
 
             if (++totalAnswer == GAME_ENDS_AT)
             {

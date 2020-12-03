@@ -166,7 +166,22 @@
     <None Include="Resources\titleImage.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\usbImage.PNG" />
+    <None Include="Resources\tutorial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\retry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return_home.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
