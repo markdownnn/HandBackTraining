@@ -17,7 +17,11 @@ namespace BME_system_design_viewer
             while (true)
             {
                 await Task.Delay(500);
-                chooseMenu(getUserHand(MainForm.handSign, 250));
+                bool userResponse = chooseMenu(getUserHand(MainForm.handSign, 250));
+                if (userResponse)
+                {
+                    break;
+                }
             }
         }
 
@@ -58,7 +62,7 @@ namespace BME_system_design_viewer
             titleImg.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
-        private void chooseMenu(int hand)
+        private bool chooseMenu(int hand)
         {
             switch (hand)
             {
@@ -66,16 +70,17 @@ namespace BME_system_design_viewer
                     MainForm.f.frame.Controls.Clear();
                     Tutorial tutorial = new Tutorial();
                     MainForm.f.frame.Controls.Add(tutorial);
-                    break;
+                    return true;
                 case 3:
                     MainForm.f.frame.Controls.Clear();
                     Description description = new Description();
                     MainForm.f.frame.Controls.Add(description);
-                    break;
+                    return true;
                 case 5:
                     Application.Exit();
-                    break;
+                    return true;
             }
+            return false;
         }
 
         private int getUserHand(int[] array, int arraySize)
