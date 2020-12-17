@@ -4,10 +4,15 @@ using System.Threading.Tasks;
 
 namespace BME_system_design_viewer
 {
+    // 점수판 화면에 관한 코드
     public partial class Scoreboard : UserControl
     {
+        // 게임 화면에서 점수를 넘겨받기 위해 public으로 설정
         public int correct = 0;
         public int wrong = 0;
+
+        bool isOn = true;
+
         public Scoreboard()
         {
             InitializeComponent();
@@ -15,16 +20,12 @@ namespace BME_system_design_viewer
 
         private async void initScoreBoard(object sender, EventArgs e)
         {
-            loadTextImg();
+            loadTextImg(); // 각종 버튼 이미지, 점수 등 로딩
             await Task.Delay(2000);
-            while (true)
+            while (isOn)
             {
-                await Task.Delay(500);
-                bool userResponse = chooseMenu(getUserHand(MainForm.handSign, 250));
-                if (userResponse)
-                {
-                    break;
-                }
+                await Task.Delay(500); // 0.5초마다 메뉴 선택을 위한 손동작을 받음.
+                chooseMenu(getUserHand(MainForm.handSign, 250));
             }
         }
 
@@ -42,26 +43,28 @@ namespace BME_system_design_viewer
             returnHomeHand.Image = Properties.Resources.hand_scissors;
         }
 
-        private bool chooseMenu(int hand)
+        private void chooseMenu(int hand)
         {
             switch (hand)
             {
-                case 1:
+                case 1: // 1번 손동작 시, 다시 게임 시작
+                    isOn = false;
                     MainForm.f.frame.Controls.Clear();
                     Game game = new Game();
                     MainForm.f.frame.Controls.Add(game);
-                    return true;
-                case 3:
+                    break;
+                case 3: // 3번 손동작 시, 메인 메뉴로 이동.
+                    isOn = false;
                     MainForm.f.frame.Controls.Clear();
                     Main main = new Main();
                     MainForm.f.frame.Controls.Add(main);
-                    return true;
+                    break;
             }
-            return false;
         }
 
         private void retry_Click(object sender, EventArgs e)
         {
+            isOn = false;
             MainForm.f.frame.Controls.Clear();
             Game game = new Game();
             MainForm.f.frame.Controls.Add(game);
@@ -69,6 +72,7 @@ namespace BME_system_design_viewer
 
         private void returnHome_Click(object sender, EventArgs e)
         {
+            isOn = false;
             MainForm.f.frame.Controls.Clear();
             Main main = new Main();
             MainForm.f.frame.Controls.Add(main);

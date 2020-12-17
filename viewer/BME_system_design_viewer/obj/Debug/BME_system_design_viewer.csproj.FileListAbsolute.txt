@@ -86,3 +86,8 @@ C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\BME_system_d
 C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.Main.resources
 C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.Game.resources
 C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.Tutorial.resources
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\bin\Debug\Interop.WMPLib.dll
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\Interop.WMPLib.dll
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\alons\biomedical\viewer\BME_system_design_viewer\obj\Debug\BME_system_design_viewer.csproj.ResolveComReference.cache
